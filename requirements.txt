@@ -1,0 +1,11 @@
+pandas
+numpy
+streamlit
+scipy
+plotly
+matplotlib
+seaborn
+streamlit-option-menu
+gspread
+oauth2client
+vega_datasets
