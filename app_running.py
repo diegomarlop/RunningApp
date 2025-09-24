@@ -325,8 +325,8 @@ else:
 
 
     if selected == 'David M. L.':
-        st.header("Datos Daves")
-        st.dataframe(df_daves)
+        #st.header("Datos Daves")
+        #st.dataframe(df_daves)
 
         #Meses
         df_daves['Fecha'] = pd.to_datetime(df_daves['Fecha'], format='%d/%m/%Y')
@@ -446,6 +446,7 @@ else:
             with col2:
                 st.subheader("🕒 Tiempo promedio por kilómetro")
                 st.dataframe(df_resultado)
+
 
 
 
