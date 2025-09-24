@@ -19,8 +19,11 @@ st.set_page_config(layout="wide")
 
 # Conexión con Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("credenciales_running.json", scope)
-client = gspread.authorize(creds)
+#creds = ServiceAccountCredentials.from_json_keyfile_name("credenciales_running.json", scope)
+cred_dict = st.secrets["gcp_service_account"]
+credentials = ServiceAccountCredentials.from_json_keyfile_dict(cred_dict,scope)
+client = gspread.authorize(credentials)
+
 
 #Iniciar sesión
 st.header(':green[Iniciar sesión]')
@@ -446,6 +449,7 @@ else:
             with col2:
                 st.subheader("🕒 Tiempo promedio por kilómetro")
                 st.dataframe(df_resultado)
+
 
 
 
