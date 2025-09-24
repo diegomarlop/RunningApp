@@ -28,7 +28,7 @@ client = gspread.authorize(credentials)
 #Iniciar sesión
 st.header(':green[Iniciar sesión]')
 usuarios = {
-    "Daves": "runner9306",
+    "Daves": "runner9303",
     "Gasca": "runner6202",
     "Diegsta" : "runner9805"
 }
@@ -449,6 +449,7 @@ else:
             with col2:
                 st.subheader("🕒 Tiempo promedio por kilómetro")
                 st.dataframe(df_resultado)
+
 
 
 
